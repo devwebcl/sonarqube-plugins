@@ -20,6 +20,9 @@ class MyClass {
     /src/test/files/
     MyFirstCustomCheck.java
     (para ser revisado)
+
+    Because the flagged lines do not comply with the rule.
+
  */
 
 

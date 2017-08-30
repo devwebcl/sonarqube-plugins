@@ -31,6 +31,9 @@ import org.sonar.samples.java.checks.MyCustomSubscriptionRule;
 import org.sonar.samples.java.checks.SecurityAnnotationMandatoryRule;
 import org.sonar.samples.java.checks.SpringControllerRequestMappingEntityRule;
 
+import org.sonar.template.java.checks.MyFirstCustomCheck;
+
+
 public final class RulesList {
 
   private RulesList() {
@@ -50,6 +53,9 @@ public final class RulesList {
       .add(AvoidUnmodifiableListRule.class)
       .add(MyCustomSubscriptionRule.class)
       .add(SecurityAnnotationMandatoryRule.class)
+
+      // other rules... (del tutorial)
+      .add(MyFirstCustomCheck.class)
       .build();
   }
 
@@ -57,4 +63,6 @@ public final class RulesList {
     return ImmutableList.<Class<? extends JavaCheck>>builder()
       .build();
   }
+
 }
+
