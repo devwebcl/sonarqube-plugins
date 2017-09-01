@@ -21,7 +21,7 @@ import java.util.List;
   name = "Return type and parameter of a method should not be the same",
   description = "For a method having a single parameter, the types of its return value and its parameter should never be the same.",
   priority = Priority.CRITICAL,
-  tags = {"bug"})
+  tags = {"bug"} )
 public class MyFirstCustomCheck extends IssuableSubscriptionVisitor {
 
     /*
