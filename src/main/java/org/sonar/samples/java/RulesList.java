@@ -33,7 +33,12 @@ import org.sonar.samples.java.checks.SpringControllerRequestMappingEntityRule;
 
 import org.sonar.template.java.checks.MyFirstCustomCheck;
 
+/*Rule Activation
 
+The second things to to is to activate the rule within the plugin. To do so,
+open class RulesList (org.sonar.samples.java.RulesList). In this class,
+you will notice methods GetJavaChecks() and GetJavaTestChecks().
+These methods are used to register our rules with alongside the rule of the Java plugin.*/
 public final class RulesList {
 
   private RulesList() {

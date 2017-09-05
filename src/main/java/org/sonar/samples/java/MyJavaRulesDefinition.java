@@ -41,7 +41,7 @@ import org.sonar.plugins.java.Java;
 import org.sonar.squidbridge.annotations.RuleTemplate;
 
 /**
- * Declare rule metadata in server repository of rules. 
+ * Declare rule metadata in server repository of rules.
  * That allows to list the rules in the page "Rules".
  */
 public class MyJavaRulesDefinition implements RulesDefinition {
@@ -86,6 +86,9 @@ public class MyJavaRulesDefinition implements RulesDefinition {
     ruleMetadata(ruleClass, rule);
 
     rule.setTemplate(AnnotationUtils.getAnnotation(ruleClass, RuleTemplate.class) != null);
+    /*
+     * return isTemplate ? Cardinality.MULTIPLE : Cardinality.SINGLE;
+     */
     if (ruleAnnotation.cardinality() == Cardinality.MULTIPLE) {
       throw new IllegalArgumentException("Cardinality is not supported, use the RuleTemplate annotation instead for " + ruleClass);
     }
