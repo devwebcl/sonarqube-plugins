@@ -58,7 +58,9 @@ public class AvoidAnnotationRule extends BaseTreeVisitor implements JavaFileScan
 
   @Override
   public void visitMethod(MethodTree tree) {
+
     List<AnnotationTree> annotations = tree.modifiers().annotations();
+
     for (AnnotationTree annotationTree : annotations) {
       if (annotationTree.annotationType().is(Tree.Kind.IDENTIFIER)) {
         IdentifierTree idf = (IdentifierTree) annotationTree.annotationType();

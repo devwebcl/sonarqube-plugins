@@ -25,6 +25,7 @@ import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
 import org.sonar.plugins.java.api.tree.MethodTree;
 
+
 @Rule(key = "AvoidBrandInMethodNames")
 public class AvoidBrandInMethodNamesRule extends BaseTreeVisitor implements JavaFileScanner {
 
@@ -56,6 +57,7 @@ public class AvoidBrandInMethodNamesRule extends BaseTreeVisitor implements Java
     }
     // The call to the super implementation allows to continue the visit of the AST.
     // Be careful to always call this method to visit every node of the tree.
+    //recursivo !!!
     super.visitMethod(tree);
 
     // All the code located after the call to the overridden method is executed when leaving the node

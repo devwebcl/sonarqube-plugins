@@ -50,6 +50,8 @@ public final class RulesList {
 
   public static List<Class<? extends JavaCheck>> getJavaChecks() {
     return ImmutableList.<Class<? extends JavaCheck>>builder()
+
+       //initial github samples:
       .add(SpringControllerRequestMappingEntityRule.class)
       .add(AvoidAnnotationRule.class)
       .add(AvoidBrandInMethodNamesRule.class)

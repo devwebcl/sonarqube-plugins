@@ -66,7 +66,7 @@ public class AvoidMethodDeclarationRule extends BaseTreeVisitor implements JavaF
     // All the code located before the call to the overridden method is executed before visiting the node
 
     // Adds an issue by attaching it with the tree and the rule
-    context.reportIssue(this, tree, "Avoid declaring methods (don't ask why)");
+    context.reportIssue(this, tree, "Avoid declaring methods (don't ask why2)");
 
     // The call to the super implementation allows to continue the visit of the AST.
     // Be careful to always call this method to visit every node of the tree.

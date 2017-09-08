@@ -40,10 +40,13 @@ public class PrinterVisitor extends BaseTreeVisitor {
   }
 
   public static String print(Tree tree) {
-    PrinterVisitor pv = new PrinterVisitor();
+
+      PrinterVisitor pv = new PrinterVisitor();
     pv.scan(tree);
+
     return pv.sb.toString();
   }
+
 
   private StringBuilder indent() {
     return sb.append(StringUtils.leftPad("", INDENT_SPACES * indentLevel));
@@ -62,9 +65,14 @@ public class PrinterVisitor extends BaseTreeVisitor {
   @Override
   protected void scan(@Nullable Tree tree) {
     if (tree != null && tree.getClass().getInterfaces() != null && tree.getClass().getInterfaces().length > 0) {
+
       String nodeName = tree.getClass().getInterfaces()[0].getSimpleName();
-      indent().append(nodeName).append("\n");
+
+      //String nombre = tree.getClass().getSimpleName().getName();   " == " + nombre +
+
+      indent().append(nodeName).append(" \n");
     }
+
     indentLevel++;
     super.scan(tree);
     indentLevel--;

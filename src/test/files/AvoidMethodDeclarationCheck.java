@@ -6,7 +6,7 @@ class AvoidMethodDeclarationCheck {
 
   int aField;
 
-  public void aMethod() { // Noncompliant {{Avoid declaring methods (don't ask why)}}
+  public void aMethod() { // Noncompliant {{Avoid declaring methods (don't ask why2)}}
 
   }
 

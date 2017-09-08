@@ -32,7 +32,7 @@ import com.google.common.collect.ImmutableList;
 
 @Rule(key = "AvoidMethodWithSameTypeInArgument")
 /**
- * To use subsctiption visitor, just extend the IssuableSubscriptionVisitor.
+ * To use subscription visitor, just extend the IssuableSubscriptionVisitor.
  */
 public class MyCustomSubscriptionRule extends IssuableSubscriptionVisitor {
 

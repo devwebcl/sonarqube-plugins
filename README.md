@@ -2,6 +2,8 @@
 
 Simple example based on the tutorial: [https://docs.sonarqube.org/display/PLUG/Writing+Custom+Java+Rules+101](https://docs.sonarqube.org/display/PLUG/Writing+Custom+Java+Rules+101)
 
+Took info from http://ashismo.github.io/java-code%20quality%20analyzer/2016/06/09/Custom-Java-Plugin-For-SONAR as well.
+
 This example demonstrates how to write **Custom Rules** for the SonarQube Java Analyzer (aka SonarJava).
 
 It requires to install **SonarJava** **4.7.1.9272** on your SonarQube 5.6+
@@ -9,7 +11,7 @@ It requires to install **SonarJava** **4.7.1.9272** on your SonarQube 5.6+
 --> actually, it needs a newer version, please check pom.xml
 
 
-| Class Filename| path           | Cool  |
+| Class Filename| path           | Description  |
 | ------------- |-------------| -----|
 | MyFirstCustomCheck.java| /src/test/files/|  A test file, which contains Java code used as input data for testing the rule |
 | org.sonar.template.java.checks. MyFirstCustomCheckTest.java| /src/test/java |    A test class, which contains the rule's unit test |

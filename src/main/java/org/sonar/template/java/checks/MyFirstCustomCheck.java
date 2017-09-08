@@ -12,8 +12,15 @@ import org.sonar.plugins.java.api.semantic.Type;
 import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
+import org.sonar.samples.java.checks.PrinterVisitor;
 
 import java.util.List;
+
+/*
+ * Sacado del tutorial !
+ * https://docs.sonarqube.org/display/PLUG/Writing+Custom+Java+Rules+101#WritingCustomJavaRules101-Threefilestoforgearule
+ *
+ */
 
 //@Rule(key = "MyFirstCustomRule")
 @Rule(
@@ -32,6 +39,9 @@ public class MyFirstCustomCheck extends IssuableSubscriptionVisitor {
   @Override
   public List<Kind> nodesToVisit() {
     //return ImmutableList.of(); // primer ejemplo vacio
+
+      // For debugging purpose, you can print out the entire AST of the analyzed file
+        //System.out.println(PrinterVisitor.print(context.getTree()));
 
     //visitamos metodos
     //org.sonar.plugins.java.api.tree.MethodTree (the interface tree associated with the METHOD kind).

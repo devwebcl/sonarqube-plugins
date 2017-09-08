@@ -85,6 +85,7 @@ public class SecurityAnnotationMandatoryRule extends BaseTreeVisitor implements 
 
   @Override
   public void visitMethod(MethodTree tree) {
+
     if (implementsSpecificInterface) {
       List<AnnotationTree> annotations = tree.modifiers().annotations();
 
