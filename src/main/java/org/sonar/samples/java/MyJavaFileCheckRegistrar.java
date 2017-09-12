@@ -22,7 +22,7 @@ package org.sonar.samples.java;
 import java.util.List;
 import org.sonar.plugins.java.api.CheckRegistrar;
 import org.sonar.plugins.java.api.JavaCheck;
-import org.sonarsource.api.sonarlint.SonarLintSide;
+//import org.sonarsource.api.sonarlint.SonarLintSide;
 
 /**
  * Provide the "checks" (implementations of rules) classes that are going be executed during
@@ -30,7 +30,7 @@ import org.sonarsource.api.sonarlint.SonarLintSide;
  *
  * This class is a batch extension by implementing the {@link org.sonar.plugins.java.api.CheckRegistrar} interface.
  */
-@SonarLintSide
+//@SonarLintSide
 public class MyJavaFileCheckRegistrar implements CheckRegistrar {
 
   /**

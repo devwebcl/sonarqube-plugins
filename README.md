@@ -76,5 +76,7 @@ public final class RulesList {
 
 This class lists all custom rules and provides the list to the CustomJavaFileCheckRegistrar class to register them with sonarqube
 
+--> for old sonar api, please check [https://github.com/SonarSource/sonar-java](https://github.com/SonarSource/sonar-java)
+
 
 
